@@ -147,3 +147,9 @@ footer {
   color: #ffffff;
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .vitrine-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur mobile */
+  }
+}
