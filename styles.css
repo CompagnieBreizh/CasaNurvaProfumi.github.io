@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fff8f8;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(to right, #ffe4e6, #fecaca);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #b91c1c;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7f1d1d;
+  margin-top: 0.5rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* --- DESIGN VITRINE (Index.html) --- */
+.vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+
+.vitrine-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.2s;
+}
+
+.vitrine-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.vitrine-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.vitrine-card h2 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #b91c1c;
+}
+
+/* --- DESIGN PAGE PARFUM (aisha.html & autres) --- */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.image-column {
+  flex: 0 0 auto;
+}
+
+.main-image {
+  width: 260px;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnail:hover {
+  border: 2px solid #b91c1c;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  color: #b91c1c;
+  font-size: 1.5rem;
+}
+
+.product-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.product-info ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #b91c1c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe4e6;
+  margin-top: 3rem;
+  color: #7f1d1d;
+  font-size: 0.9rem;
+}

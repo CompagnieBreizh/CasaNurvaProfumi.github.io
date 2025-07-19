@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bois - Compagnie Breizh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/Comp Breizh.jpeg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Bois</h1>
+    <p class="subtitle">L'élégance boisée de la nuit</p>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="image-column">
+        <img id="mainImage" src="images/Bois.jpeg" alt="Bois" class="main-image" />
+
+        <div class="thumbnail-row">
+          <img src="images/Bois.jpeg" alt="Bois" class="thumbnail" onclick="changeImage(this)" />
+          <img src="images/Bois-alt.jpeg" alt="Bois alternative" class="thumbnail" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Description</h2>
+        <p>
+          Bois est une fragrance enveloppante et sophistiquée. Elle mêle les notes boisées les plus nobles à des accents de cuir et d'épices.
+        </p>
+
+        <h2>Inspiration</h2>
+        <p>
+          Inspiré des forêts profondes et des soirées élégantes, ce parfum évoque la puissance tranquille d’un homme sûr de lui, ou la profondeur mystérieuse d’une femme affirmée.
+        </p>
+
+        <h2>Notes Olfactives</h2>
+        <ul>
+          <li><strong>Tête :</strong> Poivre noir, Lavande</li>
+          <li><strong>Cœur :</strong> Cèdre, Bois de santal</li>
+          <li><strong>Fond :</strong> Cuir, Ambre gris</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Retour à la vitrine</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Compagnie Breizh. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+      mainImage.alt = thumbnail.alt;
+    }
+  </script>
+</body>
+</html>

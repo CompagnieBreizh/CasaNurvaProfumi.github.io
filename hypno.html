@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypno - Compagnie Breizh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/Comp Breizh.jpeg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Hypno</h1>
+    <p class="subtitle">Mystère floral dans un jardin secret</p>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="image-column">
+        <img id="mainImage" src="images/Hypno.jpeg" alt="Hypno" class="main-image" />
+
+        <div class="thumbnail-row">
+          <img src="images/Hypno.jpeg" alt="Hypno" class="thumbnail" onclick="changeImage(this)" />
+          <img src="images/Hypno-alt.jpeg" alt="Hypno alternative" class="thumbnail" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Description</h2>
+        <p>
+          Hypno est une fragrance hypnotique et florale, douce et envoûtante. Son sillage évoque les allées d’un jardin secret baigné de lumière lunaire.
+        </p>
+
+        <h2>Inspiration</h2>
+        <p>
+          Pensé comme une promenade au clair de lune au cœur d’un jardin luxuriant, Hypno mélange rêve, nature et sensualité.
+        </p>
+
+        <h2>Notes Olfactives</h2>
+        <ul>
+          <li><strong>Tête :</strong> Lavande, Bergamote</li>
+          <li><strong>Cœur :</strong> Jasmin, Iris</li>
+          <li><strong>Fond :</strong> Bois de cèdre, Vanille</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Retour à la vitrine</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Compagnie Breizh. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+      mainImage.alt = thumbnail.alt;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invicts - Compagnie Breizh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/Comp Breizh.jpeg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Invicts</h1>
+    <p class="subtitle">La fraîcheur céleste incarnée</p>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="image-column">
+        <img id="mainImage" src="images/Invicts.jpeg" alt="Invicts" class="main-image" />
+
+        <div class="thumbnail-row">
+          <img src="images/Invicts.jpeg" alt="Invicts" class="thumbnail" onclick="changeImage(this)" />
+          <img src="images/Invicts-alt.jpeg" alt="Invicts alternative" class="thumbnail" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Description</h2>
+        <p>
+          Invicts est une fragrance moderne et vibrante, évoquant la puissance, la jeunesse et la liberté. Un parfum dynamique et exaltant.
+        </p>
+
+        <h2>Inspiration</h2>
+        <p>
+          Inspiré par les esprits conquérants et les héros contemporains, Invicts capture l'énergie pure d’un gagnant. Il incarne force et clarté.
+        </p>
+
+        <h2>Notes Olfactives</h2>
+        <ul>
+          <li><strong>Tête :</strong> Pamplemousse, Mandarine</li>
+          <li><strong>Cœur :</strong> Laurier, Jasmin</li>
+          <li><strong>Fond :</strong> Ambre gris, Bois de gaïac, Patchouli</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Retour à la vitrine</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Compagnie Breizh. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+      mainImage.alt = thumbnail.alt;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aisha - Compagnie Breizh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/Comp Breizh.jpeg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Aisha</h1>
+    <p class="subtitle">L’essence orientale par excellence</p>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="image-column">
+        <img id="mainImage" src="images/aisha.jpeg" alt="Aisha" class="main-image" />
+
+        <div class="thumbnail-row">
+          <img src="images/aisha.jpeg" alt="Aisha" class="thumbnail" onclick="changeImage(this)" />
+          <img src="images/aisha-alt.jpeg" alt="Aisha alternative" class="thumbnail" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Description</h2>
+        <p>
+          Aisha est un parfum oriental profond et ensorcelant. Sa fragrance s’ouvre sur des notes de safran et de rose,
+          s’épanouit avec un cœur d’ambre et de bois précieux, et se conclut sur une touche sucrée de vanille.
+        </p>
+
+        <h2>Inspiration</h2>
+        <p>
+          Inspirée des mystères du désert et des palais orientaux, Aisha incarne l’élégance envoûtante d’une nuit étoilée.
+          Idéal pour les âmes passionnées qui laissent une empreinte dans leur sillage.
+        </p>
+
+        <h2>Notes Olfactives</h2>
+        <ul>
+          <li><strong>Tête :</strong> Safran, Rose</li>
+          <li><strong>Cœur :</strong> Ambre, Bois précieux</li>
+          <li><strong>Fond :</strong> Vanille, Musc</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Retour à la vitrine</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Compagnie Breizh. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+      mainImage.alt = thumbnail.alt;
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

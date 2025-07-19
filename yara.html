@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yara - Compagnie Breizh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/Comp Breizh.jpeg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Yara</h1>
+    <p class="subtitle">Chaleur et puissance orientale</p>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="image-column">
+        <img id="mainImage" src="images/Yara.jpeg" alt="Yara" class="main-image" />
+
+        <div class="thumbnail-row">
+          <img src="images/Yara.jpeg" alt="Yara" class="thumbnail" onclick="changeImage(this)" />
+          <img src="images/Yara-alt.jpeg" alt="Yara alternative" class="thumbnail" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Description</h2>
+        <p>
+          Yara est une fragrance flamboyante, mêlant intensité et sophistication. Elle dégage une chaleur douce et une profondeur sensuelle.
+        </p>
+
+        <h2>Inspiration</h2>
+        <p>
+          Inspirée par les couchers de soleil du Moyen-Orient, Yara évoque la splendeur dorée des dunes et la magie des soirs orientaux.
+        </p>
+
+        <h2>Notes Olfactives</h2>
+        <ul>
+          <li><strong>Tête :</strong> Orange, Pêche</li>
+          <li><strong>Cœur :</strong> Fleur d’oranger, Vanille</li>
+          <li><strong>Fond :</strong> Musc, Ambre</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Retour à la vitrine</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Compagnie Breizh. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+      mainImage.alt = thumbnail.alt;
+    }
+  </script>
+</body>
+</html>
