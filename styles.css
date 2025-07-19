@@ -8,19 +8,19 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem 1rem;
-  background-color: #0f1f17; /* Vert très foncé */
-  color: #f1f1f1; /* Texte clair */
+  background-color: #0f1f17;
+  color: #f1f1f1;
 }
 
 header h1 {
   font-size: 3rem;
   margin: 0;
-  color: #ffffff; /* Blanc pur pour le titre */
+  color: #ffffff;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #d1d5db; /* Gris clair, discret */
+  color: #d1d5db;
   margin-top: 0.5rem;
 }
 
@@ -148,8 +148,19 @@ footer {
   font-size: 0.9rem;
 }
 
+/* 🔧 MOBILE : 3 colonnes, max 4 lignes visibles */
 @media (max-width: 768px) {
   .vitrine-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur mobile */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 1rem;
+    
+    /* Optionnel : limiter à 4 lignes visibles (si +12 éléments) */
+    max-height: calc(33vw * 4 + 4rem); /* 4 lignes approx + padding */
+    overflow-y: auto;
+  }
+
+  .vitrine-card {
+    padding: 0.8rem;
+    font-size: 0.95rem;
   }
 }
