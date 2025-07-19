@@ -8,18 +8,19 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem 1rem;
-  background: linear-gradient(to right, #ffe4e6, #fecaca);
+  background-color: #0f1f17; /* Vert très foncé */
+  color: #f1f1f1; /* Texte clair */
 }
 
 header h1 {
   font-size: 3rem;
   margin: 0;
-  color: #b91c1c;
+  color: #ffffff; /* Blanc pur pour le titre */
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #7f1d1d;
+  color: #d1d5db; /* Gris clair, discret */
   margin-top: 0.5rem;
 }
 
@@ -36,7 +37,6 @@ main {
   margin: auto;
   padding: 2rem 0;
 }
-
 
 .vitrine-card {
   background: #fff;
